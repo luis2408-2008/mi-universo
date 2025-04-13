@@ -110,7 +110,7 @@ def init_routes(app):
     @login_required
     @admin_required
     def admin_panel():
-        users = User.query.all()
+        users = User.query.order_by(User.created_at.desc()).all()
         return render_template('admin/panel.html', users=users)
     
     @app.route('/admin/create_admin/<username>', methods=['POST'])
