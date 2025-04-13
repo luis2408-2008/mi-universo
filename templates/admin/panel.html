@@ -66,7 +66,7 @@
             <div class="bg-gray-700 p-4 rounded-lg text-center">
                 <h3 class="text-lg font-semibold mb-2 text-blue-200">Usuarios recientes</h3>
                 <p class="text-3xl font-bold text-white">
-                    {{ users|selectattr('created_at', 'gt', now.replace(day=now.day-1))|list|length }}
+                    {{ users|length }}
                 </p>
                 <p class="text-xs text-gray-400 mt-1">Últimas 24 horas</p>
             </div>
@@ -94,7 +94,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    {% for user in users|sort(attribute='created_at', reverse=true)|slice(5) %}
+                    {% for user in users %}
                     <tr class="hover:bg-gray-700">
                         <td class="py-3 px-4 border-b border-gray-600">{{ user.username }}</td>
                         <td class="py-3 px-4 border-b border-gray-600">{{ user.created_at.strftime('%d/%m/%Y %H:%M') }}</td>
