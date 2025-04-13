@@ -17,7 +17,7 @@ El Explorador Cósmico es una plataforma educativa interactiva diseñada para ex
 ## Tecnologías utilizadas
 
 - **Backend**: Flask (Python)
-- **Base de datos**: PostgreSQL
+- **Base de datos**: SQLite (en producción) / PostgreSQL (opcional para desarrollo)
 - **Autenticación**: Flask-Login
 - **Formularios**: Flask-WTF
 - **Frontend**: HTML, CSS, JavaScript

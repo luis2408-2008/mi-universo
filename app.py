@@ -25,11 +25,16 @@ app.secret_key = os.environ.get("SESSION_SECRET", "desarrollo_secreto_cosmico")
 app.wsgi_app = ProxyFix(app.wsgi_app, x_proto=1, x_host=1)  # needed for url_for to generate with https
 
 # Configure the database
-app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get("DATABASE_URL", "postgresql://postgres:postgres@localhost/cosmos")
-app.config["SQLALCHEMY_ENGINE_OPTIONS"] = {
-    "pool_recycle": 300,
-    "pool_pre_ping": True,
-}
+# Detecta si la URL es para PostgreSQL o SQLite
+database_url = os.environ.get("DATABASE_URL", "sqlite:///explorador.db")
+# Configura la base de datos
+app.config["SQLALCHEMY_DATABASE_URI"] = database_url
+# Agrega opciones de motor solo si es PostgreSQL
+if database_url.startswith('postgresql'):
+    app.config["SQLALCHEMY_ENGINE_OPTIONS"] = {
+        "pool_recycle": 300,
+        "pool_pre_ping": True,
+    }
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
 # Initialize Flask-Login
