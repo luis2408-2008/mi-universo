@@ -1,0 +1,74 @@
+Project Title: The Origin of the Universe – Spanish Cosmic Explorer Web
+
+General Description:
+Build a super powerful and modern full-stack web application, 100% powered by Python, and ready to deploy on Render.com. The app features:
+
+	•	A fully animated, beautiful login and registration system
+	•	Real authentication with username and password, plus persistent PostgreSQL cloud database
+	•	A visually stunning and fully interactive web page focused on “El Origen del Universo”
+	•	Real images from the cloud, embedded and playable YouTube videos
+	•	Everything is in Spanish: the interface, content, buttons, labels, and interactions
+	•	All logic, routing, and database handling is done in Python
+
+⸻
+
+Technology Stack:
+
+Core Language:
+	•	Everything is built in Python
+
+Backend (Python):
+	•	Framework: Flask or FastAPI (Python-based)
+	•	Authentication: User login, registration, and session/token management written in Python
+	•	Database Integration: PostgreSQL managed from Python using SQLAlchemy, asyncpg, or psycopg2
+	•	API & Routing: Handled through Python routes
+	•	Deployment Ready: Fully deployable on Render.com
+
+Frontend:
+	•	Languages: HTML5, CSS3, JavaScript
+	•	Templating (if Flask): Jinja2 (Python-integrated)
+	•	Styling: Tailwind CSS with top-tier animations and transitions
+	•	All UI Content in Spanish: “Iniciar sesión”, “Registrarse”, “Ver video”, “Leer más”, etc.
+
+Database:
+	•	PostgreSQL (Cloud, Persistent)
+	•	Real database connection with Python
+	•	Data persists even after shutdowns or restarts
+	•	Stores user info, session data, and dynamic content
+
+Multimedia:
+	•	Images: Loaded from public cloud URLs (NASA, Unsplash, etc.)
+	•	Videos: Embedded directly from YouTube and playable inside the app
+
+Deployment:
+	•	Fully compatible with Render.com
+	•	Includes:
+	•	requirements.txt for Python dependencies
+	•	render.yaml for deployment setup
+	•	Start command: gunicorn app:app or equivalent for production
+	•	Environment variables for secrets and DB config
+
+⸻
+
+Application Flow:
+	1.	Home Page – Login Screen (in Spanish):
+	•	Inputs: Usuario, Contraseña
+	•	Smooth CSS animations
+	•	Option to go to “¿No tienes cuenta? Regístrate”
+	•	All logic handled with Python backend
+	2.	Registration Page:
+	•	Inputs: Usuario, Contraseña, Confirmar contraseña
+	•	Validations in frontend and backend
+	•	Data saved to PostgreSQL
+	3.	After Login – Universe Origin Dashboard:
+	•	Interface entirely in Spanish
+	•	Sections: “El Big Bang”, “Teorías científicas”, “Conspiraciones cósmicas”, etc.
+	•	Real YouTube videos embedded
+	•	Scroll animations, interactive buttons, gallery of images
+	•	Real, informative, and visually engaging
+
+⸻
+
+Ultimate Goal:
+
+Create a next-level educational, visual and interactive web experience (in Spanish), 100% powered by Python, with modern animations, persistent data, embedded real multimedia content, and a solid backend deployed on Render.com.
