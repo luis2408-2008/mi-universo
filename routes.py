@@ -18,6 +18,9 @@ def admin_required(f):
     return decorated_function
 
 def init_routes(app):
+    @app.route('/quantum')
+    def quantum():
+        return render_template('sections/quantum.html')
     
     @app.errorhandler(403)
     def forbidden(error):

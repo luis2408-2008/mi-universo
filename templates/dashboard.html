@@ -38,7 +38,7 @@
     </section>
     
     <!-- Main categories section -->
-    <section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <section class="grid grid-cols-1 md:grid-cols-4 gap-6">
         <!-- Big Bang Card -->
         <div class="bg-space-navy/40 backdrop-blur-sm rounded-xl border border-space-purple overflow-hidden transition duration-300 hover:shadow-[0_0_15px_rgba(181,101,167,0.5)] group">
             <div class="h-48 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1572205091443-1de1bf66db3b?q=80&w=1470');">
@@ -73,6 +73,19 @@
                 <h3 class="text-xl font-bold text-space-highlight mb-2 group-hover:text-space-star transition">Conspiraciones Cósmicas</h3>
                 <p class="text-space-star mb-4">Desde teorías alternativas hasta conspiraciones populares sobre el origen del universo y fenómenos cósmicos inexplicados.</p>
                 <a href="{{ url_for('conspiraciones') }}" class="inline-block py-2 px-4 bg-space-purple hover:bg-space-accent text-white rounded-lg transition duration-300 text-center font-medium">
+                    Ver Más
+                </a>
+            </div>
+        </div>
+
+        <!-- Quantum Mysteries Card -->
+        <div class="bg-space-navy/40 backdrop-blur-sm rounded-xl border border-space-purple overflow-hidden transition duration-300 hover:shadow-[0_0_15px_rgba(181,101,167,0.5)] group">
+            <div class="h-48 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1462331940025-496dfbfc7564?q=80&w=1470');">
+            </div>
+            <div class="p-6">
+                <h3 class="text-xl font-bold text-space-highlight mb-2 group-hover:text-space-star transition">Misterios Cuánticos</h3>
+                <p class="text-space-star mb-4">Explora los enigmas más profundos de la realidad cuántica, donde la ciencia encuentra lo inexplicable.</p>
+                <a href="{{ url_for('quantum') }}" class="inline-block py-2 px-4 bg-space-purple hover:bg-space-accent text-white rounded-lg transition duration-300 text-center font-medium">
                     Ver Más
                 </a>
             </div>
