@@ -1,0 +1,195 @@
+{% extends "base.html" %}
+
+{% block title %}Teorías Científicas - Explorador Cósmico{% endblock %}
+
+{% block content %}
+<div class="space-y-8">
+    <section class="text-center">
+        <h1 class="text-4xl font-bold text-space-star mb-4">Teorías Científicas</h1>
+        <p class="text-xl text-space-highlight max-w-3xl mx-auto">Explicaciones científicas sobre el origen y evolución del universo</p>
+    </section>
+    
+    <!-- Main content -->
+    <section class="bg-space-navy/40 backdrop-blur-sm rounded-xl border border-space-purple p-8">
+        <div class="mb-8">
+            <h2 class="text-2xl font-bold text-space-highlight mb-4">Más Allá del Big Bang</h2>
+            <p class="text-space-star mb-4">
+                Si bien el Big Bang es la teoría más aceptada sobre el origen del universo, los científicos han desarrollado múltiples marcos teóricos que amplían o proponen alternativas a este modelo. Estas teorías buscan responder preguntas fundamentales sobre la naturaleza del universo, su origen y su eventual destino.
+            </p>
+        </div>
+        
+        <!-- Main theories -->
+        <div class="space-y-10">
+            <!-- Teoría 1 -->
+            <div class="flex flex-col md:flex-row gap-8 items-center">
+                <div class="flex-1 order-2 md:order-1">
+                    <h3 class="text-xl font-bold text-space-highlight mb-2">Teoría Inflacionaria</h3>
+                    <p class="text-space-star mb-4">
+                        Propuesta por Alan Guth en 1980, la teoría inflacionaria sugiere que el universo experimentó una expansión exponencial en sus primeros momentos. Esta breve pero intensa expansión explicaría por qué el universo parece tan uniforme a gran escala y resolvería el problema del horizonte y la planitud.
+                    </p>
+                    <p class="text-space-star">
+                        Según esta teoría, antes de la fase inflacionaria, nuestro universo estaba en un estado de "falso vacío" con alta energía. La transición a un estado de menor energía provocó la liberación energética que impulsó la inflación, expandiendo el universo en factores de 10^26 o más en menos de 10^-32 segundos.
+                    </p>
+                </div>
+                <div class="flex-1 flex justify-center order-1 md:order-2">
+                    <div class="w-full max-w-md aspect-video rounded-lg overflow-hidden shadow-lg bg-space-purple/20 flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" class="w-24 h-24 text-space-highlight">
+                            <circle cx="100" cy="100" r="50" fill="none" stroke="currentColor" stroke-width="4" />
+                            <circle cx="100" cy="100" r="80" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="5,5" />
+                            <circle cx="100" cy="100" r="20" fill="none" stroke="currentColor" stroke-width="6" />
+                            <path d="M100,180 L100,20" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="2,2" />
+                            <path d="M20,100 L180,100" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="2,2" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Teoría 2 -->
+            <div class="flex flex-col md:flex-row gap-8 items-center">
+                <div class="flex-1 flex justify-center">
+                    <div class="w-full max-w-md aspect-video rounded-lg overflow-hidden shadow-lg">
+                        <iframe 
+                            width="100%" 
+                            height="100%" 
+                            src="https://www.youtube.com/embed/QqjsZEZMR7I" 
+                            title="Teoría de Cuerdas" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+                <div class="flex-1">
+                    <h3 class="text-xl font-bold text-space-highlight mb-2">Teoría de Cuerdas</h3>
+                    <p class="text-space-star mb-4">
+                        La teoría de cuerdas propone que las partículas fundamentales no son puntos, sino pequeñas cuerdas vibrantes unidimensionales. Diferentes vibraciones de estas cuerdas corresponderían a diferentes partículas observadas.
+                    </p>
+                    <p class="text-space-star">
+                        Una implicación fascinante de la teoría de cuerdas es que requiere dimensiones adicionales más allá de las tres espaciales y una temporal que experimentamos. Estas dimensiones adicionales estarían "compactificadas" en escalas tan pequeñas que no las podemos percibir directamente.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Teoría 3 -->
+            <div class="flex flex-col md:flex-row gap-8 items-center">
+                <div class="flex-1 order-2 md:order-1">
+                    <h3 class="text-xl font-bold text-space-highlight mb-2">Universo Cíclico</h3>
+                    <p class="text-space-star mb-4">
+                        El modelo del universo cíclico, propuesto por Paul Steinhardt y Neil Turok, sugiere que el Big Bang no fue el comienzo del tiempo, sino un evento en un ciclo de expansión y contracción. Según esta teoría, nuestro universo ha pasado por innumerables ciclos de Big Bang y "Big Crunch" (o Big Freeze).
+                    </p>
+                    <p class="text-space-star">
+                        En algunas versiones de esta teoría, el universo nunca se contrae completamente, sino que rebota antes de alcanzar una singularidad, comenzando un nuevo ciclo de expansión. Este modelo evita la necesidad de una singularidad inicial, haciendo que el universo sea eterno tanto hacia el pasado como hacia el futuro.
+                    </p>
+                </div>
+                <div class="flex-1 flex justify-center order-1 md:order-2">
+                    <div class="w-full max-w-md aspect-video rounded-lg overflow-hidden shadow-lg bg-space-purple/20 flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100" class="w-64 h-32 text-space-highlight">
+                            <path d="M10,50 Q50,10 100,50 Q150,90 190,50" fill="none" stroke="currentColor" stroke-width="3" />
+                            <path d="M10,50 Q50,90 100,50 Q150,10 190,50" fill="none" stroke="currentColor" stroke-width="3" stroke-dasharray="5,5" />
+                            <circle cx="100" cy="50" r="5" fill="currentColor" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Teoría 4 -->
+            <div class="flex flex-col md:flex-row gap-8 items-center">
+                <div class="flex-1 flex justify-center">
+                    <div class="w-full max-w-md aspect-video rounded-lg overflow-hidden shadow-lg bg-space-purple/20 flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" class="w-48 h-48 text-space-highlight">
+                            <circle cx="100" cy="100" r="50" fill="none" stroke="currentColor" stroke-width="2" />
+                            <circle cx="160" cy="100" r="25" fill="none" stroke="currentColor" stroke-width="2" />
+                            <circle cx="40" cy="100" r="25" fill="none" stroke="currentColor" stroke-width="2" />
+                            <circle cx="100" cy="160" r="25" fill="none" stroke="currentColor" stroke-width="2" />
+                            <circle cx="100" cy="40" r="25" fill="none" stroke="currentColor" stroke-width="2" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="flex-1">
+                    <h3 class="text-xl font-bold text-space-highlight mb-2">Multiverso</h3>
+                    <p class="text-space-star mb-4">
+                        La teoría del multiverso sugiere que nuestro universo es solo uno de muchos universos que existen en paralelo. Este concepto ha surgido como consecuencia de varias teorías físicas, incluidas la inflación cósmica, la teoría de cuerdas y la interpretación de muchos mundos de la mecánica cuántica.
+                    </p>
+                    <p class="text-space-star">
+                        Según algunas versiones de esta teoría, cada universo podría tener leyes físicas diferentes, constantes fundamentales distintas, e incluso dimensiones variadas. Esto podría explicar por qué nuestro universo parece "ajustado finamente" para la vida, ya que en un multiverso infinito, todos los posibles conjuntos de leyes físicas existirían en alguna parte.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Comparison table -->
+    <section class="bg-space-navy/40 backdrop-blur-sm rounded-xl border border-space-purple p-8">
+        <h2 class="text-2xl font-bold text-space-highlight mb-6">Comparación de Teorías</h2>
+        <div class="overflow-x-auto">
+            <table class="w-full text-space-star border-collapse">
+                <thead>
+                    <tr class="bg-space-purple/30">
+                        <th class="p-4 text-left border border-space-purple">Teoría</th>
+                        <th class="p-4 text-left border border-space-purple">Origen</th>
+                        <th class="p-4 text-left border border-space-purple">Tiempo</th>
+                        <th class="p-4 text-left border border-space-purple">Dimensiones</th>
+                        <th class="p-4 text-left border border-space-purple">Estado Actual</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="bg-space-purple/10 hover:bg-space-purple/20 transition">
+                        <td class="p-4 border border-space-purple font-bold">Big Bang</td>
+                        <td class="p-4 border border-space-purple">Singularidad inicial</td>
+                        <td class="p-4 border border-space-purple">Comenzó hace ~13.8 mil millones de años</td>
+                        <td class="p-4 border border-space-purple">3 espaciales + 1 temporal</td>
+                        <td class="p-4 border border-space-purple">Ampliamente aceptada</td>
+                    </tr>
+                    <tr class="bg-space-purple/10 hover:bg-space-purple/20 transition">
+                        <td class="p-4 border border-space-purple font-bold">Inflacionaria</td>
+                        <td class="p-4 border border-space-purple">Expansión exponencial temprana</td>
+                        <td class="p-4 border border-space-purple">Complementa al Big Bang</td>
+                        <td class="p-4 border border-space-purple">3 espaciales + 1 temporal</td>
+                        <td class="p-4 border border-space-purple">Ampliamente aceptada</td>
+                    </tr>
+                    <tr class="bg-space-purple/10 hover:bg-space-purple/20 transition">
+                        <td class="p-4 border border-space-purple font-bold">Cuerdas</td>
+                        <td class="p-4 border border-space-purple">Vibraciones de cuerdas fundamentales</td>
+                        <td class="p-4 border border-space-purple">Compatible con Big Bang</td>
+                        <td class="p-4 border border-space-purple">10, 11 o 26 dimensiones</td>
+                        <td class="p-4 border border-space-purple">Importante en investigación, sin confirmación experimental</td>
+                    </tr>
+                    <tr class="bg-space-purple/10 hover:bg-space-purple/20 transition">
+                        <td class="p-4 border border-space-purple font-bold">Cíclico</td>
+                        <td class="p-4 border border-space-purple">Ciclos de expansión y contracción</td>
+                        <td class="p-4 border border-space-purple">Infinito (sin inicio ni fin)</td>
+                        <td class="p-4 border border-space-purple">Variado según modelo</td>
+                        <td class="p-4 border border-space-purple">Hipotético, en desarrollo</td>
+                    </tr>
+                    <tr class="bg-space-purple/10 hover:bg-space-purple/20 transition">
+                        <td class="p-4 border border-space-purple font-bold">Multiverso</td>
+                        <td class="p-4 border border-space-purple">Múltiples universos paralelos</td>
+                        <td class="p-4 border border-space-purple">Variado según universo</td>
+                        <td class="p-4 border border-space-purple">Variado según universo</td>
+                        <td class="p-4 border border-space-purple">Hipotético, pero con base en física teórica</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    
+    <!-- Further exploration -->
+    <section class="bg-space-navy/40 backdrop-blur-sm rounded-xl border border-space-purple p-8">
+        <h2 class="text-2xl font-bold text-space-highlight mb-4">Continúa Explorando</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <a href="{{ url_for('bigbang') }}" class="bg-space-purple/20 rounded-lg p-6 border border-space-purple/50 hover:bg-space-purple/30 transition">
+                <h3 class="text-xl font-bold text-space-highlight mb-2">El Big Bang</h3>
+                <p class="text-space-star">Vuelve a la teoría principal sobre el origen del universo.</p>
+            </a>
+            <a href="{{ url_for('conspiraciones') }}" class="bg-space-purple/20 rounded-lg p-6 border border-space-purple/50 hover:bg-space-purple/30 transition">
+                <h3 class="text-xl font-bold text-space-highlight mb-2">Conspiraciones Cósmicas</h3>
+                <p class="text-space-star">Explora teorías alternativas y curiosidades sobre el origen del universo.</p>
+            </a>
+            <a href="{{ url_for('dashboard') }}" class="bg-space-purple/20 rounded-lg p-6 border border-space-purple/50 hover:bg-space-purple/30 transition">
+                <h3 class="text-xl font-bold text-space-highlight mb-2">Volver al Inicio</h3>
+                <p class="text-space-star">Regresa al Dashboard para explorar más contenido.</p>
+            </a>
+        </div>
+    </section>
+</div>
+{% endblock %}

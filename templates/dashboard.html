@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard - Explorador Cósmico{% endblock %}
+
+{% block content %}
+<div class="space-y-10">
+    <!-- Welcome section -->
+    <section class="text-center">
+        <h1 class="text-4xl font-bold text-space-star mb-4">Bienvenido al Explorador Cósmico, {{ current_user.username }}</h1>
+        <p class="text-xl text-space-highlight max-w-3xl mx-auto">Comienza tu viaje a través de los misterios del origen del universo</p>
+    </section>
+    
+    <!-- Featured content section -->
+    <section class="bg-space-navy/40 backdrop-blur-sm rounded-xl border border-space-purple p-6 animate-float">
+        <div class="flex flex-col md:flex-row items-center gap-8">
+            <div class="flex-1">
+                <h2 class="text-2xl font-bold text-space-highlight mb-4">El Misterio de Nuestros Orígenes</h2>
+                <p class="text-space-star mb-4">El universo, vasto y misterioso, ha fascinado a la humanidad desde tiempos inmemoriales. ¿De dónde venimos? ¿Cómo comenzó todo? Estas preguntas han impulsado a científicos, filósofos y pensadores a buscar respuestas en las estrellas.</p>
+                <a href="{{ url_for('bigbang') }}" class="inline-block py-2 px-4 bg-space-purple hover:bg-space-accent text-white rounded-lg transition duration-300 text-center font-medium">
+                    Explorar Más
+                </a>
+            </div>
+            <div class="flex-1 flex justify-center">
+                <div class="relative w-full max-w-md aspect-video rounded-lg overflow-hidden shadow-lg">
+                    <iframe 
+                        width="100%" 
+                        height="100%" 
+                        src="https://www.youtube.com/embed/QXfhGxZFcVE?si=s8oQf8ydXDCsTpBo" 
+                        title="Origen del Universo" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen
+                        class="absolute inset-0">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Main categories section -->
+    <section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Big Bang Card -->
+        <div class="bg-space-navy/40 backdrop-blur-sm rounded-xl border border-space-purple overflow-hidden transition duration-300 hover:shadow-[0_0_15px_rgba(181,101,167,0.5)] group">
+            <div class="h-48 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1572205091443-1de1bf66db3b?q=80&w=1470');">
+            </div>
+            <div class="p-6">
+                <h3 class="text-xl font-bold text-space-highlight mb-2 group-hover:text-space-star transition">El Big Bang</h3>
+                <p class="text-space-star mb-4">La teoría del Big Bang es actualmente el modelo cosmológico más aceptado sobre el origen y la evolución del universo.</p>
+                <a href="{{ url_for('bigbang') }}" class="inline-block py-2 px-4 bg-space-purple hover:bg-space-accent text-white rounded-lg transition duration-300 text-center font-medium">
+                    Ver Más
+                </a>
+            </div>
+        </div>
+        
+        <!-- Scientific Theories Card -->
+        <div class="bg-space-navy/40 backdrop-blur-sm rounded-xl border border-space-purple overflow-hidden transition duration-300 hover:shadow-[0_0_15px_rgba(181,101,167,0.5)] group">
+            <div class="h-48 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1464802686167-b939a6910659?q=80&w=1450');">
+            </div>
+            <div class="p-6">
+                <h3 class="text-xl font-bold text-space-highlight mb-2 group-hover:text-space-star transition">Teorías Científicas</h3>
+                <p class="text-space-star mb-4">Explora las diversas teorías científicas que explican el origen y la evolución del universo a través del tiempo.</p>
+                <a href="{{ url_for('teorias') }}" class="inline-block py-2 px-4 bg-space-purple hover:bg-space-accent text-white rounded-lg transition duration-300 text-center font-medium">
+                    Ver Más
+                </a>
+            </div>
+        </div>
+        
+        <!-- Cosmic Conspiracies Card -->
+        <div class="bg-space-navy/40 backdrop-blur-sm rounded-xl border border-space-purple overflow-hidden transition duration-300 hover:shadow-[0_0_15px_rgba(181,101,167,0.5)] group">
+            <div class="h-48 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1445905595283-21f8ae8a33d2?q=80&w=1473');">
+            </div>
+            <div class="p-6">
+                <h3 class="text-xl font-bold text-space-highlight mb-2 group-hover:text-space-star transition">Conspiraciones Cósmicas</h3>
+                <p class="text-space-star mb-4">Desde teorías alternativas hasta conspiraciones populares sobre el origen del universo y fenómenos cósmicos inexplicados.</p>
+                <a href="{{ url_for('conspiraciones') }}" class="inline-block py-2 px-4 bg-space-purple hover:bg-space-accent text-white rounded-lg transition duration-300 text-center font-medium">
+                    Ver Más
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Did you know section -->
+    <section class="bg-space-navy/40 backdrop-blur-sm rounded-xl border border-space-purple p-6">
+        <h2 class="text-2xl font-bold text-space-highlight mb-4">¿Sabías que...?</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="bg-space-purple/20 rounded-lg p-4 border border-space-purple/50">
+                <p class="text-space-star">El universo observable tiene aproximadamente 93 mil millones de años luz de diámetro, pero su edad es de solo 13.8 mil millones de años. Esta aparente contradicción se debe a la expansión del universo.</p>
+            </div>
+            <div class="bg-space-purple/20 rounded-lg p-4 border border-space-purple/50">
+                <p class="text-space-star">La materia que podemos ver representa solo alrededor del 5% del universo. El resto está compuesto por materia oscura (27%) y energía oscura (68%), ambas invisibles para nosotros.</p>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock %}

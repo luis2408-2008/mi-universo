@@ -1,0 +1,189 @@
+{% extends "base.html" %}
+
+{% block title %}El Big Bang - Explorador Cósmico{% endblock %}
+
+{% block content %}
+<div class="space-y-8">
+    <section class="text-center">
+        <h1 class="text-4xl font-bold text-space-star mb-4">El Big Bang</h1>
+        <p class="text-xl text-space-highlight max-w-3xl mx-auto">El evento que dio origen a todo lo que conocemos</p>
+    </section>
+    
+    <!-- Main content -->
+    <section class="bg-space-navy/40 backdrop-blur-sm rounded-xl border border-space-purple p-8">
+        <div class="flex flex-col md:flex-row gap-8 items-center mb-8">
+            <div class="flex-1">
+                <h2 class="text-2xl font-bold text-space-highlight mb-4">¿Qué es el Big Bang?</h2>
+                <p class="text-space-star mb-4">
+                    El Big Bang es la teoría cosmológica predominante que explica el origen del universo. Según esta teoría, el universo comenzó hace aproximadamente 13.8 mil millones de años a partir de un estado extremadamente caliente y denso, expandiéndose hasta el cosmos que observamos hoy.
+                </p>
+                <p class="text-space-star">
+                    Contrario a la creencia popular, el Big Bang no fue una explosión en el espacio, sino la expansión repentina del espacio mismo desde un punto singularmente denso y caliente. Toda la materia, energía, espacio y tiempo que conocemos habrían surgido en ese momento.
+                </p>
+            </div>
+            <div class="flex-1 flex justify-center">
+                <div class="relative w-full max-w-md aspect-video rounded-lg overflow-hidden shadow-lg">
+                    <iframe 
+                        width="100%" 
+                        height="100%" 
+                        src="https://www.youtube.com/embed/BsSGq-6Qp_s" 
+                        title="El Big Bang" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen
+                        class="absolute inset-0">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+        
+        <div class="mb-8">
+            <h2 class="text-2xl font-bold text-space-highlight mb-4">Cronología del Big Bang</h2>
+            <div class="relative">
+                <div class="absolute h-full w-1 bg-space-purple left-0 md:left-1/2 transform md:-translate-x-1/2"></div>
+                
+                <!-- Timeline items -->
+                <div class="relative flex flex-col space-y-10">
+                    <!-- Item 1 -->
+                    <div class="flex flex-col md:flex-row md:items-center">
+                        <div class="md:w-1/2 md:pr-8 md:text-right order-2 md:order-1">
+                            <h3 class="text-lg font-bold text-space-highlight">La Singularidad</h3>
+                            <p class="text-space-star">Momento cero. Un punto infinitamente denso y caliente que contenía toda la materia y energía del universo.</p>
+                        </div>
+                        <div class="relative md:w-1/2 flex items-center justify-start md:justify-center order-1 md:order-2 mb-2 md:mb-0">
+                            <div class="h-8 w-8 bg-space-accent rounded-full z-10 flex items-center justify-center">
+                                <div class="h-4 w-4 bg-space-star rounded-full animate-pulse"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 2 -->
+                    <div class="flex flex-col md:flex-row md:items-center">
+                        <div class="relative md:w-1/2 flex items-center justify-start md:justify-center order-1 mb-2 md:mb-0">
+                            <div class="h-8 w-8 bg-space-accent rounded-full z-10 flex items-center justify-center">
+                                <div class="h-4 w-4 bg-space-star rounded-full animate-pulse"></div>
+                            </div>
+                        </div>
+                        <div class="md:w-1/2 md:pl-8 order-2">
+                            <h3 class="text-lg font-bold text-space-highlight">Inflación Cósmica</h3>
+                            <p class="text-space-star">Entre 10<sup>-36</sup> y 10<sup>-32</sup> segundos después del Big Bang, el universo se expandió exponencialmente.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 3 -->
+                    <div class="flex flex-col md:flex-row md:items-center">
+                        <div class="md:w-1/2 md:pr-8 md:text-right order-2 md:order-1">
+                            <h3 class="text-lg font-bold text-space-highlight">Era de los Quarks</h3>
+                            <p class="text-space-star">Desde 10<sup>-12</sup> segundos, los quarks y gluones formaron un "plasma de quark-gluón".</p>
+                        </div>
+                        <div class="relative md:w-1/2 flex items-center justify-start md:justify-center order-1 md:order-2 mb-2 md:mb-0">
+                            <div class="h-8 w-8 bg-space-accent rounded-full z-10 flex items-center justify-center">
+                                <div class="h-4 w-4 bg-space-star rounded-full animate-pulse"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 4 -->
+                    <div class="flex flex-col md:flex-row md:items-center">
+                        <div class="relative md:w-1/2 flex items-center justify-start md:justify-center order-1 mb-2 md:mb-0">
+                            <div class="h-8 w-8 bg-space-accent rounded-full z-10 flex items-center justify-center">
+                                <div class="h-4 w-4 bg-space-star rounded-full animate-pulse"></div>
+                            </div>
+                        </div>
+                        <div class="md:w-1/2 md:pl-8 order-2">
+                            <h3 class="text-lg font-bold text-space-highlight">Nucleosíntesis</h3>
+                            <p class="text-space-star">Entre 3 y 20 minutos después del Big Bang, los protones y neutrones se combinaron para formar los primeros núcleos atómicos.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 5 -->
+                    <div class="flex flex-col md:flex-row md:items-center">
+                        <div class="md:w-1/2 md:pr-8 md:text-right order-2 md:order-1">
+                            <h3 class="text-lg font-bold text-space-highlight">Recombinación</h3>
+                            <p class="text-space-star">Aproximadamente 380,000 años después, los electrones se unieron a los núcleos formando átomos neutrales, permitiendo que la luz viajara libremente.</p>
+                        </div>
+                        <div class="relative md:w-1/2 flex items-center justify-start md:justify-center order-1 md:order-2 mb-2 md:mb-0">
+                            <div class="h-8 w-8 bg-space-accent rounded-full z-10 flex items-center justify-center">
+                                <div class="h-4 w-4 bg-space-star rounded-full animate-pulse"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 6 -->
+                    <div class="flex flex-col md:flex-row md:items-center">
+                        <div class="relative md:w-1/2 flex items-center justify-start md:justify-center order-1 mb-2 md:mb-0">
+                            <div class="h-8 w-8 bg-space-accent rounded-full z-10 flex items-center justify-center">
+                                <div class="h-4 w-4 bg-space-star rounded-full animate-pulse"></div>
+                            </div>
+                        </div>
+                        <div class="md:w-1/2 md:pl-8 order-2">
+                            <h3 class="text-lg font-bold text-space-highlight">Formación de Estrellas y Galaxias</h3>
+                            <p class="text-space-star">Entre 100 y 700 millones de años después, comenzaron a formarse las primeras estrellas y galaxias.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div>
+            <h2 class="text-2xl font-bold text-space-highlight mb-4">Evidencias del Big Bang</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-space-purple/20 rounded-lg p-6 border border-space-purple/50">
+                    <h3 class="text-xl font-bold text-space-highlight mb-2">Radiación Cósmica de Fondo</h3>
+                    <p class="text-space-star">Esta radiación es el "eco" del Big Bang, descubierta en 1965 por Arno Penzias y Robert Wilson. Es una radiación térmica que llena uniformemente todo el universo observable.</p>
+                </div>
+                <div class="bg-space-purple/20 rounded-lg p-6 border border-space-purple/50">
+                    <h3 class="text-xl font-bold text-space-highlight mb-2">Expansión del Universo</h3>
+                    <p class="text-space-star">Edwin Hubble descubrió en 1929 que las galaxias se alejan de nosotros, y cuanto más lejos están, más rápido se alejan. Esto sugiere que el universo se está expandiendo desde un punto inicial.</p>
+                </div>
+                <div class="bg-space-purple/20 rounded-lg p-6 border border-space-purple/50">
+                    <h3 class="text-xl font-bold text-space-highlight mb-2">Abundancia de Elementos Ligeros</h3>
+                    <p class="text-space-star">Las cantidades observadas de hidrógeno, helio y litio en el universo coinciden perfectamente con las predicciones de la nucleosíntesis del Big Bang.</p>
+                </div>
+                <div class="bg-space-purple/20 rounded-lg p-6 border border-space-purple/50">
+                    <h3 class="text-xl font-bold text-space-highlight mb-2">Estructura a Gran Escala</h3>
+                    <p class="text-space-star">La distribución de galaxias y su agrupación en el universo también está en línea con las predicciones basadas en el Big Bang y la posterior evolución del cosmos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Interactive elements -->
+    <section class="bg-space-navy/40 backdrop-blur-sm rounded-xl border border-space-purple p-8">
+        <h2 class="text-2xl font-bold text-space-highlight mb-6">Galería: Visualizando el Big Bang</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="aspect-square overflow-hidden rounded-lg group">
+                <img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?q=80&w=1470&auto=format&fit=crop" alt="Nebulosa" class="w-full h-full object-cover transform transition duration-500 group-hover:scale-110">
+            </div>
+            <div class="aspect-square overflow-hidden rounded-lg group">
+                <img src="https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?q=80&w=1513&auto=format&fit=crop" alt="Estrellas en el espacio" class="w-full h-full object-cover transform transition duration-500 group-hover:scale-110">
+            </div>
+            <div class="aspect-square overflow-hidden rounded-lg group">
+                <img src="https://images.unsplash.com/photo-1543722530-d2c3201371e7?q=80&w=1474&auto=format&fit=crop" alt="Galaxia espiral" class="w-full h-full object-cover transform transition duration-500 group-hover:scale-110">
+            </div>
+            <div class="aspect-square overflow-hidden rounded-lg group">
+                <img src="https://images.unsplash.com/photo-1506703719100-a0b3fb681ff2?q=80&w=1470&auto=format&fit=crop" alt="Cuerpo celeste" class="w-full h-full object-cover transform transition duration-500 group-hover:scale-110">
+            </div>
+        </div>
+    </section>
+    
+    <!-- Further exploration -->
+    <section class="bg-space-navy/40 backdrop-blur-sm rounded-xl border border-space-purple p-8">
+        <h2 class="text-2xl font-bold text-space-highlight mb-4">Continúa Explorando</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <a href="{{ url_for('teorias') }}" class="bg-space-purple/20 rounded-lg p-6 border border-space-purple/50 hover:bg-space-purple/30 transition">
+                <h3 class="text-xl font-bold text-space-highlight mb-2">Teorías Científicas</h3>
+                <p class="text-space-star">Descubre otras teorías sobre el origen y la evolución del universo.</p>
+            </a>
+            <a href="{{ url_for('conspiraciones') }}" class="bg-space-purple/20 rounded-lg p-6 border border-space-purple/50 hover:bg-space-purple/30 transition">
+                <h3 class="text-xl font-bold text-space-highlight mb-2">Conspiraciones Cósmicas</h3>
+                <p class="text-space-star">Explora teorías alternativas y curiosidades sobre el origen del universo.</p>
+            </a>
+            <a href="{{ url_for('dashboard') }}" class="bg-space-purple/20 rounded-lg p-6 border border-space-purple/50 hover:bg-space-purple/30 transition">
+                <h3 class="text-xl font-bold text-space-highlight mb-2">Volver al Inicio</h3>
+                <p class="text-space-star">Regresa al Dashboard para explorar más contenido.</p>
+            </a>
+        </div>
+    </section>
+</div>
+{% endblock %}

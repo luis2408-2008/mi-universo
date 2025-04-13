@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block title %}Registrarse - Explorador Cósmico{% endblock %}
+
+{% block content %}
+<div class="flex flex-col items-center justify-center min-h-[70vh]">
+    <div class="w-full max-w-md bg-space-navy/60 backdrop-blur-md p-8 rounded-xl shadow-lg border border-space-purple animate-float">
+        <div class="text-center mb-8">
+            <i class="fas fa-user-plus text-5xl text-space-highlight mb-4"></i>
+            <h1 class="text-3xl font-bold text-space-star">Registrarse</h1>
+            <p class="text-space-highlight mt-2">Crea tu cuenta del Explorador Cósmico</p>
+        </div>
+        
+        <form method="POST" action="{{ url_for('register') }}" class="space-y-6">
+            {{ form.hidden_tag() }}
+            
+            <div class="space-y-2">
+                <label for="{{ form.username.id }}" class="block text-space-star font-medium">{{ form.username.label }}</label>
+                {{ form.username(class="w-full px-4 py-3 bg-space-dark/80 border border-space-purple text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-space-highlight focus:border-transparent transition") }}
+                {% if form.username.errors %}
+                    <div class="text-red-400 text-sm mt-1">
+                        {% for error in form.username.errors %}
+                            <p>{{ error }}</p>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </div>
+            
+            <div class="space-y-2">
+                <label for="{{ form.password.id }}" class="block text-space-star font-medium">{{ form.password.label }}</label>
+                {{ form.password(class="w-full px-4 py-3 bg-space-dark/80 border border-space-purple text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-space-highlight focus:border-transparent transition") }}
+                {% if form.password.errors %}
+                    <div class="text-red-400 text-sm mt-1">
+                        {% for error in form.password.errors %}
+                            <p>{{ error }}</p>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </div>
+            
+            <div class="space-y-2">
+                <label for="{{ form.confirm_password.id }}" class="block text-space-star font-medium">{{ form.confirm_password.label }}</label>
+                {{ form.confirm_password(class="w-full px-4 py-3 bg-space-dark/80 border border-space-purple text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-space-highlight focus:border-transparent transition") }}
+                {% if form.confirm_password.errors %}
+                    <div class="text-red-400 text-sm mt-1">
+                        {% for error in form.confirm_password.errors %}
+                            <p>{{ error }}</p>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </div>
+            
+            <div>
+                {{ form.submit(class="w-full py-3 px-4 bg-space-purple hover:bg-space-accent text-white rounded-lg transition duration-300 cursor-pointer font-medium") }}
+            </div>
+        </form>
+        
+        <div class="mt-6 text-center">
+            <p class="text-space-star">¿Ya tienes cuenta? <a href="{{ url_for('login') }}" class="text-space-highlight hover:underline">Iniciar Sesión</a></p>
+        </div>
+    </div>
+</div>
+{% endblock %}

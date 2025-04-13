@@ -1,0 +1,236 @@
+{% extends "base.html" %}
+
+{% block title %}Conspiraciones Cósmicas - Explorador Cósmico{% endblock %}
+
+{% block content %}
+<div class="space-y-8">
+    <section class="text-center">
+        <h1 class="text-4xl font-bold text-space-star mb-4">Conspiraciones Cósmicas</h1>
+        <p class="text-xl text-space-highlight max-w-3xl mx-auto">Teorías alternativas y misterios sin resolver sobre el origen del universo</p>
+    </section>
+    
+    <!-- Disclaimer -->
+    <div class="bg-space-purple/30 backdrop-blur-sm rounded-xl border border-space-purple p-6 animate-pulse-slow">
+        <div class="flex items-start gap-4">
+            <div class="text-space-highlight text-3xl">
+                <i class="fas fa-exclamation-triangle"></i>
+            </div>
+            <div>
+                <h2 class="text-xl font-bold text-space-highlight mb-2">Aviso Importante</h2>
+                <p class="text-space-star">
+                    Las teorías presentadas en esta sección no están respaldadas por el consenso científico actual. Se incluyen con fines educativos para mostrar la diversidad de ideas que han surgido en torno al origen del universo. El pensamiento crítico y la evidencia científica son fundamentales para evaluar cualquier teoría.
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Main content -->
+    <section class="bg-space-navy/40 backdrop-blur-sm rounded-xl border border-space-purple p-8">
+        <div class="mb-8">
+            <h2 class="text-2xl font-bold text-space-highlight mb-4">Perspectivas Alternativas</h2>
+            <p class="text-space-star mb-4">
+                A lo largo de la historia, diversas culturas, filosofías y pensadores independientes han propuesto explicaciones alternativas sobre el origen del universo. Algunas de estas teorías se basan en interpretaciones diferentes de los datos científicos, mientras que otras incorporan elementos filosóficos, religiosos o especulativos.
+            </p>
+            <p class="text-space-star">
+                Explorar estas perspectivas nos permite apreciar la rica diversidad del pensamiento humano y comprender cómo diferentes culturas y épocas han abordado las mismas preguntas fundamentales.
+            </p>
+        </div>
+        
+        <!-- Conspiracy theories grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Teoría 1 -->
+            <div class="bg-space-purple/20 rounded-lg p-6 border border-space-purple/50">
+                <div class="flex items-start gap-4 mb-4">
+                    <div class="text-space-highlight text-3xl">
+                        <i class="fas fa-broadcast-tower"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-space-highlight">Universo Eléctrico</h3>
+                </div>
+                <p class="text-space-star mb-4">
+                    La teoría del Universo Eléctrico propone que la electricidad, no la gravedad, es la fuerza dominante en la formación y evolución del cosmos. Según esta teoría, fenómenos como galaxias, estrellas y planetas están principalmente moldeados por fuerzas electromagnéticas.
+                </p>
+                <p class="text-space-star">
+                    Los defensores argumentan que las corrientes eléctricas a gran escala que fluyen a través del espacio pueden explicar estructuras cósmicas sin necesidad de conceptos como materia oscura o energía oscura. Sin embargo, esta teoría contradice numerosas observaciones que respaldan la cosmología estándar.
+                </p>
+                <div class="mt-4 flex justify-center">
+                    <div class="relative w-full rounded-lg overflow-hidden shadow-lg aspect-video">
+                        <iframe 
+                            width="100%" 
+                            height="100%" 
+                            src="https://www.youtube.com/embed/1ULPX3pUWf0" 
+                            title="Universo Eléctrico" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen
+                            class="absolute inset-0">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Teoría 2 -->
+            <div class="bg-space-purple/20 rounded-lg p-6 border border-space-purple/50">
+                <div class="flex items-start gap-4 mb-4">
+                    <div class="text-space-highlight text-3xl">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-space-highlight">Universo Simulado</h3>
+                </div>
+                <p class="text-space-star mb-4">
+                    La hipótesis de la simulación sugiere que nuestra realidad, incluyendo la Tierra y el universo observable, podría ser una simulación computacional avanzada creada por una civilización mucho más desarrollada que la nuestra.
+                </p>
+                <p class="text-space-star">
+                    Algunos defensores, como el filósofo Nick Bostrom, argumentan que dado el rápido avance de nuestra propia tecnología de simulación, es estadísticamente probable que ya estemos viviendo en una simulación, si las civilizaciones avanzadas tienden a crear muchas simulaciones de realidad.
+                </p>
+                <div class="mt-4 bg-space-navy/60 p-4 rounded-lg border border-space-purple">
+                    <p class="text-space-star italic">
+                        "Si hay muchas más mentes simuladas que biológicas, entonces lo más probable es que nosotros también estemos simulados."
+                        <span class="block mt-2 text-right text-space-highlight">— Elon Musk</span>
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Teoría 3 -->
+            <div class="bg-space-purple/20 rounded-lg p-6 border border-space-purple/50">
+                <div class="flex items-start gap-4 mb-4">
+                    <div class="text-space-highlight text-3xl">
+                        <i class="fas fa-atom"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-space-highlight">Estado Estacionario</h3>
+                </div>
+                <p class="text-space-star mb-4">
+                    La teoría del Estado Estacionario, propuesta en 1948 por Fred Hoyle, Thomas Gold y Hermann Bondi, sugiere que el universo no tuvo un principio definido y se mantiene siempre igual a gran escala a pesar de su expansión.
+                </p>
+                <p class="text-space-star">
+                    Para mantener una densidad constante mientras el universo se expande, esta teoría postula la creación continua de materia en el espacio vacío. Aunque alguna vez fue una alternativa científica seria al Big Bang, las evidencias observacionales, especialmente el descubrimiento de la radiación cósmica de fondo, llevaron a su abandono por la comunidad científica.
+                </p>
+                <div class="mt-4 flex justify-center">
+                    <div class="w-full h-48 bg-space-navy/60 rounded-lg border border-space-purple flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100" class="w-64 h-32 text-space-highlight">
+                            <line x1="10" y1="50" x2="190" y2="50" stroke="currentColor" stroke-width="2" />
+                            <circle cx="50" cy="50" r="5" fill="currentColor" />
+                            <circle cx="100" cy="50" r="5" fill="currentColor" />
+                            <circle cx="150" cy="50" r="5" fill="currentColor" />
+                            <text x="50" y="30" fill="currentColor" font-size="10" text-anchor="middle">Pasado</text>
+                            <text x="100" y="30" fill="currentColor" font-size="10" text-anchor="middle">Presente</text>
+                            <text x="150" y="30" fill="currentColor" font-size="10" text-anchor="middle">Futuro</text>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Teoría 4 -->
+            <div class="bg-space-purple/20 rounded-lg p-6 border border-space-purple/50">
+                <div class="flex items-start gap-4 mb-4">
+                    <div class="text-space-highlight text-3xl">
+                        <i class="fas fa-dragon"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-space-highlight">Mitologías Cosmogónicas</h3>
+                </div>
+                <p class="text-space-star mb-4">
+                    Las cosmogonías son relatos mitológicos sobre el origen del mundo y el universo. Prácticamente todas las culturas tradicionales han desarrollado sus propias explicaciones sobre cómo comenzó el cosmos.
+                </p>
+                <p class="text-space-star">
+                    Desde el caos primordial de la mitología griega, el huevo cósmico de las tradiciones hindúes, la dualidad yin-yang en la cosmología china, hasta las narrativas de creación en culturas indígenas de América, África y Oceanía, estos relatos representan intentos de entender nuestro origen a través de la narrativa cultural.
+                </p>
+                <div class="mt-4 grid grid-cols-2 gap-4">
+                    <div class="bg-space-navy/60 p-3 rounded-lg border border-space-purple">
+                        <p class="text-space-star text-sm">
+                            <span class="font-bold text-space-highlight">Mitología Nórdica:</span> El universo comenzó con un abismo vacío llamado Ginnungagap, flanqueado por el fuego de Muspelheim y el hielo de Niflheim.
+                        </p>
+                    </div>
+                    <div class="bg-space-navy/60 p-3 rounded-lg border border-space-purple">
+                        <p class="text-space-star text-sm">
+                            <span class="font-bold text-space-highlight">Mitología Maya:</span> Según el Popol Vuh, los dioses Tepeu y Gucumatz crearon la tierra, las plantas, los animales y finalmente a los humanos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Interactive poll -->
+    <section class="bg-space-navy/40 backdrop-blur-sm rounded-xl border border-space-purple p-8">
+        <h2 class="text-2xl font-bold text-space-highlight mb-6">¿Qué piensas tú?</h2>
+        <div class="mb-4">
+            <p class="text-space-star">De todas las teorías alternativas, ¿cuál te parece más intrigante?</p>
+        </div>
+        <div class="space-y-3">
+            <div class="bg-space-purple/20 rounded-lg p-4 border border-space-purple/50 hover:bg-space-purple/30 transition cursor-pointer">
+                <div class="flex items-center">
+                    <div class="mr-3">
+                        <div class="h-5 w-5 border-2 border-space-highlight rounded-full flex items-center justify-center">
+                            <div class="h-2 w-2 bg-space-highlight rounded-full invisible"></div>
+                        </div>
+                    </div>
+                    <label class="text-space-star cursor-pointer">Universo Eléctrico</label>
+                </div>
+            </div>
+            <div class="bg-space-purple/20 rounded-lg p-4 border border-space-purple/50 hover:bg-space-purple/30 transition cursor-pointer">
+                <div class="flex items-center">
+                    <div class="mr-3">
+                        <div class="h-5 w-5 border-2 border-space-highlight rounded-full flex items-center justify-center">
+                            <div class="h-2 w-2 bg-space-highlight rounded-full invisible"></div>
+                        </div>
+                    </div>
+                    <label class="text-space-star cursor-pointer">Universo Simulado</label>
+                </div>
+            </div>
+            <div class="bg-space-purple/20 rounded-lg p-4 border border-space-purple/50 hover:bg-space-purple/30 transition cursor-pointer">
+                <div class="flex items-center">
+                    <div class="mr-3">
+                        <div class="h-5 w-5 border-2 border-space-highlight rounded-full flex items-center justify-center">
+                            <div class="h-2 w-2 bg-space-highlight rounded-full invisible"></div>
+                        </div>
+                    </div>
+                    <label class="text-space-star cursor-pointer">Estado Estacionario</label>
+                </div>
+            </div>
+            <div class="bg-space-purple/20 rounded-lg p-4 border border-space-purple/50 hover:bg-space-purple/30 transition cursor-pointer">
+                <div class="flex items-center">
+                    <div class="mr-3">
+                        <div class="h-5 w-5 border-2 border-space-highlight rounded-full flex items-center justify-center">
+                            <div class="h-2 w-2 bg-space-highlight rounded-full invisible"></div>
+                        </div>
+                    </div>
+                    <label class="text-space-star cursor-pointer">Mitologías Cosmogónicas</label>
+                </div>
+            </div>
+            <div class="bg-space-purple/20 rounded-lg p-4 border border-space-purple/50 hover:bg-space-purple/30 transition cursor-pointer">
+                <div class="flex items-center">
+                    <div class="mr-3">
+                        <div class="h-5 w-5 border-2 border-space-highlight rounded-full flex items-center justify-center">
+                            <div class="h-2 w-2 bg-space-highlight rounded-full invisible"></div>
+                        </div>
+                    </div>
+                    <label class="text-space-star cursor-pointer">Otra teoría</label>
+                </div>
+            </div>
+        </div>
+        <div class="mt-6">
+            <button type="button" class="py-2 px-6 bg-space-purple hover:bg-space-accent text-white rounded-lg transition duration-300 font-medium">
+                Votar
+            </button>
+        </div>
+    </section>
+    
+    <!-- Further exploration -->
+    <section class="bg-space-navy/40 backdrop-blur-sm rounded-xl border border-space-purple p-8">
+        <h2 class="text-2xl font-bold text-space-highlight mb-4">Continúa Explorando</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <a href="{{ url_for('bigbang') }}" class="bg-space-purple/20 rounded-lg p-6 border border-space-purple/50 hover:bg-space-purple/30 transition">
+                <h3 class="text-xl font-bold text-space-highlight mb-2">El Big Bang</h3>
+                <p class="text-space-star">Vuelve a la teoría principal sobre el origen del universo.</p>
+            </a>
+            <a href="{{ url_for('teorias') }}" class="bg-space-purple/20 rounded-lg p-6 border border-space-purple/50 hover:bg-space-purple/30 transition">
+                <h3 class="text-xl font-bold text-space-highlight mb-2">Teorías Científicas</h3>
+                <p class="text-space-star">Explora otras teorías científicas sobre el universo.</p>
+            </a>
+            <a href="{{ url_for('dashboard') }}" class="bg-space-purple/20 rounded-lg p-6 border border-space-purple/50 hover:bg-space-purple/30 transition">
+                <h3 class="text-xl font-bold text-space-highlight mb-2">Volver al Inicio</h3>
+                <p class="text-space-star">Regresa al Dashboard para explorar más contenido.</p>
+            </a>
+        </div>
+    </section>
+</div>
+{% endblock %}
