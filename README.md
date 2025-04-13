@@ -74,7 +74,7 @@ Esta aplicación está configurada para ser desplegada fácilmente en Render.com
    - Conecta tu repositorio de GitHub/GitLab.
    - Configura el nombre como "explorador-cosmico" (o el que prefieras).
    - Asegúrate de que el entorno sea "Python".
-   - En la sección de Build Command, ingresa: `pip install -r requirements.txt`.
+   - En la sección de Build Command, ingresa: `pip install .`.
    - En Start Command, ingresa: `gunicorn --bind 0.0.0.0:$PORT --reuse-port main:app`.
    - Selecciona el plan "Free".
    - Haz clic en "Create Web Service".
@@ -109,7 +109,7 @@ La aplicación está configurada para usar SQLite por defecto, por lo que no se 
 
 2. Instala las dependencias:
    ```
-   pip install -r requirements.txt
+   pip install .
    ```
 
 3. Variables de entorno (opcionales):
