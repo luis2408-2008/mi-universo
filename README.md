@@ -12,7 +12,7 @@ El Explorador Cósmico es una plataforma educativa interactiva diseñada para ex
 - **Diseño responsivo**: Experiencia optimizada en dispositivos móviles y de escritorio
 - **Contenido multimedia**: Videos, imágenes y líneas de tiempo interactivas
 - **Animaciones**: Efectos visuales como fondos de estrellas y elementos flotantes
-- **Base de datos PostgreSQL**: Almacenamiento seguro de datos de usuarios
+- **Base de datos**: Almacenamiento seguro de datos de usuarios
 
 ## Tecnologías utilizadas
 
@@ -69,33 +69,35 @@ Esta aplicación está configurada para ser desplegada fácilmente en Render.com
 
 2. **Accede a Render.com** y crea una cuenta o inicia sesión.
 
-3. **Utiliza el Blueprint para despliegue automático**:
-   - En el dashboard de Render, selecciona "Blueprints" en la barra lateral.
-   - Haz clic en "New Blueprint Instance".
-   - Selecciona el repositorio donde subiste el código.
-   - Render detectará automáticamente el archivo `render.yaml` y configurará los servicios.
-   - Confirma la creación de todos los servicios (web y base de datos).
+3. **Método con Web Services (recomendado para plan gratuito)**:
+   - En el dashboard de Render, selecciona "New" → "Web Service".
+   - Conecta tu repositorio de GitHub/GitLab.
+   - Configura el nombre como "explorador-cosmico" (o el que prefieras).
+   - Asegúrate de que el entorno sea "Python".
+   - En la sección de Build Command, ingresa: `pip install -r requirements.txt`.
+   - En Start Command, ingresa: `gunicorn --bind 0.0.0.0:$PORT --reuse-port main:app`.
+   - Selecciona el plan "Free".
+   - Haz clic en "Create Web Service".
 
 4. **Espera a que se complete el despliegue** (puede tomar unos minutos).
 
 5. **Accede a tu aplicación** mediante la URL proporcionada por Render:
    - `https://explorador-cosmico.onrender.com` (o la URL asignada)
 
-### Acerca de la configuración en Render
+### Variables de entorno importantes
 
-El archivo `render.yaml` configura automáticamente:
+Cuando se despliega en Render, es recomendable configurar estas variables de entorno:
 
-- El servicio web para la aplicación Flask
-- Una base de datos PostgreSQL
-- Las variables de entorno necesarias
-- La conexión entre la aplicación y la base de datos
+- `SESSION_SECRET`: Clave secreta para las sesiones (Render puede generar una automáticamente)
+- `PYTHON_VERSION`: Establecida a "3.11.3" (o la versión que prefieras)
+
+La aplicación está configurada para usar SQLite por defecto, por lo que no se requiere configuración adicional de base de datos.
 
 ## Desarrollo local
 
 ### Requisitos previos
 
 - Python 3.11 o superior
-- PostgreSQL
 
 ### Configuración
 
@@ -110,9 +112,9 @@ El archivo `render.yaml` configura automáticamente:
    pip install -r requirements.txt
    ```
 
-3. Configura las variables de entorno:
-   - `DATABASE_URL`: URL de conexión a PostgreSQL
+3. Variables de entorno (opcionales):
    - `SESSION_SECRET`: Clave secreta para la sesión
+   - Por defecto, la aplicación usará SQLite sin necesidad de configuración adicional
 
 4. Inicia la aplicación:
    ```
@@ -126,4 +128,4 @@ El archivo `render.yaml` configura automáticamente:
 
 ## Licencia
 
-Este proyecto está bajo licencia MIT - consulta el archivo LICENSE para más detalles.# mi-universo
+Este proyecto está bajo licencia MIT - consulta el archivo LICENSE para más detalles.
