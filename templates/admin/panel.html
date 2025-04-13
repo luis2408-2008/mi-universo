@@ -51,10 +51,10 @@
     </div>
     
     <!-- Estadísticas -->
-    <div class="bg-gray-800 rounded-lg p-6 shadow-lg">
-        <h2 class="text-2xl font-semibold mb-4 text-blue-300">Estadísticas</h2>
+    <div class="bg-gray-800 rounded-lg p-6 shadow-lg mb-8">
+        <h2 class="text-2xl font-semibold mb-4 text-blue-300">Estadísticas Generales</h2>
         
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
             <div class="bg-gray-700 p-4 rounded-lg text-center">
                 <h3 class="text-lg font-semibold mb-2 text-blue-200">Total de usuarios</h3>
                 <p class="text-3xl font-bold text-white">{{ users|length }}</p>
@@ -70,6 +70,56 @@
                 </p>
                 <p class="text-xs text-gray-400 mt-1">Últimas 24 horas</p>
             </div>
+            <div class="bg-gray-700 p-4 rounded-lg text-center">
+                <h3 class="text-lg font-semibold mb-2 text-blue-200">Esta semana</h3>
+                <p class="text-3xl font-bold text-white">
+                    {{ users|selectattr('created_at', 'gt', now.replace(day=now.day-7))|list|length }}
+                </p>
+                <p class="text-xs text-gray-400 mt-1">Últimos 7 días</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Últimos usuarios registrados -->
+    <div class="bg-gray-800 rounded-lg p-6 shadow-lg mb-8">
+        <h2 class="text-2xl font-semibold mb-4 text-blue-300">Últimos Registros</h2>
+        <div class="overflow-x-auto">
+            <table class="w-full text-left">
+                <thead>
+                    <tr class="bg-gray-700">
+                        <th class="py-3 px-4 border-b border-gray-600">Usuario</th>
+                        <th class="py-3 px-4 border-b border-gray-600">Fecha de registro</th>
+                        <th class="py-3 px-4 border-b border-gray-600">Estado</th>
+                        <th class="py-3 px-4 border-b border-gray-600">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for user in users|sort(attribute='created_at', reverse=true)|slice(5) %}
+                    <tr class="hover:bg-gray-700">
+                        <td class="py-3 px-4 border-b border-gray-600">{{ user.username }}</td>
+                        <td class="py-3 px-4 border-b border-gray-600">{{ user.created_at.strftime('%d/%m/%Y %H:%M') }}</td>
+                        <td class="py-3 px-4 border-b border-gray-600">
+                            {% if user.is_admin %}
+                                <span class="bg-green-600 text-white px-2 py-1 rounded-full text-xs">Admin</span>
+                            {% else %}
+                                <span class="bg-blue-600 text-white px-2 py-1 rounded-full text-xs">Usuario</span>
+                            {% endif %}
+                        </td>
+                        <td class="py-3 px-4 border-b border-gray-600">
+                            <div class="flex space-x-2">
+                                {% if not user.is_admin %}
+                                <form action="{{ url_for('create_admin', username=user.username) }}" method="POST" class="inline">
+                                    <button type="submit" class="bg-green-500 hover:bg-green-700 text-white font-bold py-1 px-2 rounded text-xs">
+                                        Hacer Admin
+                                    </button>
+                                </form>
+                                {% endif %}
+                            </div>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
         </div>
     </div>
     
