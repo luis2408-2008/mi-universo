@@ -72,6 +72,11 @@
                         <a href="{{ url_for('bigbang') }}" class="text-space-star hover:text-space-highlight transition">El Big Bang</a>
                         <a href="{{ url_for('teorias') }}" class="text-space-star hover:text-space-highlight transition">Teorías Científicas</a>
                         <a href="{{ url_for('conspiraciones') }}" class="text-space-star hover:text-space-highlight transition">Conspiraciones Cósmicas</a>
+                        {% if current_user.is_admin %}
+                        <a href="{{ url_for('admin_panel') }}" class="text-yellow-400 hover:text-yellow-300 transition font-bold">
+                            <i class="fas fa-user-shield mr-1"></i>Admin
+                        </a>
+                        {% endif %}
                         <a href="{{ url_for('logout') }}" class="text-space-star hover:text-space-highlight transition">Cerrar Sesión</a>
                     {% else %}
                         <a href="{{ url_for('login') }}" class="text-space-star hover:text-space-highlight transition">Iniciar Sesión</a>
@@ -93,6 +98,11 @@
                         <a href="{{ url_for('bigbang') }}" class="text-space-star hover:text-space-highlight transition py-1">El Big Bang</a>
                         <a href="{{ url_for('teorias') }}" class="text-space-star hover:text-space-highlight transition py-1">Teorías Científicas</a>
                         <a href="{{ url_for('conspiraciones') }}" class="text-space-star hover:text-space-highlight transition py-1">Conspiraciones Cósmicas</a>
+                        {% if current_user.is_admin %}
+                        <a href="{{ url_for('admin_panel') }}" class="text-yellow-400 hover:text-yellow-300 transition py-1 font-bold">
+                            <i class="fas fa-user-shield mr-1"></i>Panel de Admin
+                        </a>
+                        {% endif %}
                         <a href="{{ url_for('logout') }}" class="text-space-star hover:text-space-highlight transition py-1">Cerrar Sesión</a>
                     {% else %}
                         <a href="{{ url_for('login') }}" class="text-space-star hover:text-space-highlight transition py-1">Iniciar Sesión</a>
