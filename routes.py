@@ -2,6 +2,7 @@ import logging
 from flask import render_template, redirect, url_for, flash, request, abort
 from flask_login import login_user, logout_user, login_required, current_user
 from functools import wraps
+from sqlalchemy import inspect, text
 from app import db
 from models import User
 from forms import LoginForm, RegistrationForm
@@ -125,3 +126,25 @@ def init_routes(app):
             flash('No tienes permisos para realizar esta acción', 'error')
             
         return redirect(url_for('admin_panel'))
+        
+    @app.route('/update_schema')
+    def update_schema():
+        """Ruta de utilidad para actualizar el esquema de la base de datos."""
+        try:
+            # Verificar si existe la columna is_admin
+            inspector = db.inspect(db.engine)
+            columns = [c['name'] for c in inspector.get_columns('user')]
+            
+            if 'is_admin' not in columns:
+                # Añadir la columna is_admin
+                db.session.execute(text("ALTER TABLE \"user\" ADD COLUMN is_admin BOOLEAN DEFAULT FALSE"))
+                db.session.commit()
+                flash('Esquema de base de datos actualizado correctamente.', 'success')
+            else:
+                flash('El esquema de base de datos ya está actualizado.', 'info')
+            
+            return redirect(url_for('index'))
+        except Exception as e:
+            db.session.rollback()
+            flash(f'Error al actualizar el esquema: {str(e)}', 'error')
+            return redirect(url_for('index'))

@@ -91,5 +91,20 @@
             </div>
         </div>
     </section>
+    
+    {% if current_user.is_admin %}
+    <!-- Admin panel link (only visible to admins) -->
+    <section class="bg-space-navy/40 backdrop-blur-sm rounded-xl border border-space-purple p-6">
+        <div class="flex items-center justify-between">
+            <div>
+                <h2 class="text-2xl font-bold text-yellow-400 mb-2">Panel de Administrador</h2>
+                <p class="text-space-star">Accede al panel de administración para ver todos los usuarios registrados y gestionar la plataforma.</p>
+            </div>
+            <a href="{{ url_for('admin_panel') }}" class="inline-block py-2 px-6 bg-yellow-600 hover:bg-yellow-700 text-white rounded-lg transition duration-300 text-center font-medium">
+                Acceder
+            </a>
+        </div>
+    </section>
+    {% endif %}
 </div>
 {% endblock %}
