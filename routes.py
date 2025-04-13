@@ -110,8 +110,13 @@ def init_routes(app):
     @login_required
     @admin_required
     def admin_panel():
-        users = User.query.order_by(User.created_at.desc()).all()
-        return render_template('admin/panel.html', users=users)
+        try:
+            users = User.query.order_by(User.created_at.desc()).all()
+            return render_template('admin/panel.html', users=users)
+        except Exception as e:
+            logger.error(f"Error en admin_panel: {str(e)}")
+            flash('Error al cargar el panel de administración', 'error')
+            return redirect(url_for('dashboard'))
     
     @app.route('/admin/create_admin/<username>', methods=['POST'])
     @login_required
